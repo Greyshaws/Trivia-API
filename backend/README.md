@@ -261,7 +261,7 @@ The API will return four types of error codes:
      - Creates a new question
 
 - Sample: ```bash
-             curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{ "question": "Frankie Fredericks represented which African country in athletics?", "answer": "Namibia", "difficulty": 3, "category": "6" }'
+             curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{ "question": "What is the capital of Nigeria?", "answer": "Abuja", "difficulty": 2, "category": "3" }'
              ```
 
 ```json
@@ -278,18 +278,18 @@ The API will return four types of error codes:
      - Returns questions that have the search substring
 
 - Sample: ```bash
-             curl http://127.0.0.1:5000/questions/search -X POST -H "Content-Type: application/json" -d '{"searchTerm": "Anne Rice"}'
+             curl http://127.0.0.1:5000/questions/search -X POST -H "Content-Type: application/json" -d '{"searchTerm": "Peanut Butter"}'
              ```
 
 ```json
    {
   "questions": [
     {
-      "answer": "Tom Cruise",
-      "category": 5,
-      "difficulty": 4,
-      "id": 4,
-      "question": "What actor did author Anne Rice first denounce, then praise in the role of her beloved Lestat?"
+      "answer": "George Washington Carver",
+      "category": 4,
+      "difficulty": 2,
+      "id": 12,
+      "question": "Who invented Peanut Butter?"
     }
   ],
   "success": true,
@@ -351,7 +351,7 @@ The API will return four types of error codes:
     - Returns JSON object with random question not in previous questions.
 
 - Sample: ```bash
-             curl http://127.0.0.1:5000/quizzes -X POST -H "Content-Type: application/json" -d '{"previous_questions": [5, 9], "quiz_category": {"type": "History", "id": "4"}}'
+             curl http://127.0.0.1:5000/quizzes -X POST -H "Content-Type: application/json" -d '{"previous_questions": [5, 9], "quiz_category": {"type": "Science", "id": "1"}}'
              ```
 
 ```json

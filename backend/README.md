@@ -351,7 +351,7 @@ The API will return four types of error codes:
     - Returns JSON object with random question not in previous questions.
 
 - Sample: ```bash
-             curl http://127.0.0.1:5000/quizzes -X POST -H "Content-Type: application/json" -d '{"previous_questions": [5, 9], "quiz_category": {"type": "Science", "id": "1"}}'
+             curl http://127.0.0.1:5000/quizzes -X POST -H "Content-Type: application/json" -d '{"previous_questions": [4, 7], "quiz_category": {"type": "Science", "id": "1"}}'
              ```
 
 ```json
